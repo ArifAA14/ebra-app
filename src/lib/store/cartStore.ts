@@ -38,6 +38,21 @@ export const useCartStore = create(
           };
         }),
 
+      updateQuantity: (id, quantity) =>
+        set((state) => {
+          const updatedCart = state.cart
+            .map((i) =>
+              i.id === id ? { ...i, quantity: Math.max(0, quantity) } : i
+            )
+            .filter((i) => i.quantity > 0);
+
+          return {
+            cart: updatedCart,
+            totalItems: updatedCart.reduce((sum, i) => sum + i.quantity, 0),
+            totalPrice: updatedCart.reduce((sum, i) => sum + i.price * i.quantity, 0),
+          };
+        }),
+
       clearCart: () => set({ cart: [], totalItems: 0, totalPrice: 0 }),
     }),
     { name: "cart-storage" }

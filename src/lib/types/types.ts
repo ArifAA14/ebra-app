@@ -26,4 +26,6 @@ type CartState = {
   addToCart: (item: Omit<CartItem, "quantity">) => void;
   removeFromCart: (id: number) => void;
   clearCart: () => void;
+  updateQuantity: (id: number, quantity: number) => void;
+
 };
