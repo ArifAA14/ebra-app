@@ -21,7 +21,7 @@ function Breadcrumb({ product }: { product: Product }) {
 			<p className="text-xs lg:text-sm font-normal font-sans text-gray-400 text-pretty tracking-tight">
 				&gt;
 			</p>
-			<p className="text-xs lg:text-sm capitalize font-normal font-sans text-black text-pretty tracking-tight line-clamp-1">
+			<p className="text-xs lg:text-sm capitalize italic font-normal font-sans text-black text-pretty tracking-tight line-clamp-1">
 				{product.title}
 			</p>
 		</Link>

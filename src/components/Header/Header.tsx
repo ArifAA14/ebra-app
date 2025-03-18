@@ -1,9 +1,10 @@
 import { Search, ShoppingBag } from 'lucide-react';
 import Link from 'next/link'
 import React from 'react'
+import CartIcon from "./CartIcon";
 
 function Header() {
-  return (
+	return (
 		<div className="w-full h-full flex items-center justify-between ">
 			<Link
 				href={"/"}
@@ -19,12 +20,7 @@ function Header() {
 				>
 					<Search />
 				</Link>
-				<Link
-					href={"/cart"}
-					className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
-				>
-					<ShoppingBag />
-				</Link>
+				<CartIcon />
 			</div>
 		</div>
 	);

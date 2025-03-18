@@ -4,6 +4,7 @@ import Image from "next/image";
 import productImage from "../../../../public/prod_img.png";
 import Stars from "@/components/Product-Page/Stars";
 import { HeartIcon } from "lucide-react";
+import ActionButtons from "@/components/Product-Page/ActionButtons";
 
 export default async function ProductPage({
 	params,
@@ -12,8 +13,7 @@ export default async function ProductPage({
 }) {
 	const { id } = await params;
 	if (!id) return <div>No product found</div>;
-  const product = await getProduct(id);
-  console.log(product)
+	const product = await getProduct(id);
 	return (
 		<div className="w-full h-full flex flex-col gap-6 mt-10">
 			<Breadcrumb product={product} />
@@ -45,23 +45,7 @@ export default async function ProductPage({
 						</h4>
 					</div>
 
-					<div className="flex flex-col gap-4">
-						<button
-							className="w-full max-w-[95%] mx-auto h-full bg-neutral-100 text-neutral-800 font-medium 
-            font-sans tracking-tight text-base px-4 py-3 cursor-pointer
-            hover:bg-neutral-200/90 transition-all ease-in-out duration-200 flex items-center gap-2 justify-center"
-            >
-              <HeartIcon className="size-4"/>
-							Wishlist
-						</button>
-						<button
-							className="w-full max-w-[95%] mx-auto h-full bg-black text-white font-medium 
-            font-sans tracking-tight text-base px-4 py-3 cursor-pointer
-            hover:bg-black/90 transition-all ease-in-out duration-200"
-						>
-							Add to Cart
-						</button>
-					</div>
+					<ActionButtons product={product} />
 				</div>
 			</div>
 		</div>

@@ -9,4 +9,21 @@
      rate: number;
      count: number;
    }
-}
+ }
+
+type CartItem = {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+  quantity: number;
+};
+
+type CartState = {
+  cart: CartItem[];
+  totalItems: number;
+  totalPrice: number;
+  addToCart: (item: Omit<CartItem, "quantity">) => void;
+  removeFromCart: (id: number) => void;
+  clearCart: () => void;
+};
