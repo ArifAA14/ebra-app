@@ -4,13 +4,13 @@ import productImage from "../../../../public/prod_img.png";
 
 function CartPopoverItem({ product }: { product: CartItem }) {
 	return (
-		<div className="flex items-center justify-between">
-			<div className="w-full h-full flex gap-3 items-center">
+		<div className="flex items-center justify-between w-full border-b last:border-b-0 border-neutral-200 pb-3.5 last:pb-0  ">
+			<div className="w-full h-full flex gap-4 items-center">
 				<Image
 					src={productImage}
 					alt="product image"
-					width={65}
-					height={60}
+					width={50}
+					height={50}
 					quality={100}
 					className="object-contain border border-neutral-200"
 				/>
@@ -18,11 +18,9 @@ function CartPopoverItem({ product }: { product: CartItem }) {
 					<p className="text-sm font-normal font-sans tracking-tight text-black line-clamp-1 max-w-[80%] ">
 						{product.title}
 					</p>
-		
+
 					<div className="flex items-center gap-3 mt-2 cursor-pointer">
-		
-            <QuantitySelector id={product.id} quantity={product.quantity}  />
-					
+						<QuantitySelector id={product.id} quantity={product.quantity} />
 					</div>
 				</div>
 			</div>
