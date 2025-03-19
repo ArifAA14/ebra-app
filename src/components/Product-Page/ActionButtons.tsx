@@ -5,7 +5,7 @@ import React from 'react'
 import { toast } from 'sonner';
 
 function ActionButtons({ product }: { product: Product }) {
-  const { cart, addToCart } = useCartStore();
+  const {  addToCart } = useCartStore();
 
 	function handleAdd() {
 		addToCart(product);

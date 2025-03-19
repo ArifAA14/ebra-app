@@ -1,4 +1,5 @@
- interface Product {
+/* eslint-disable @typescript-eslint/no-unused-vars */
+interface Product {
   id: number;
   title: string;
   price: number;

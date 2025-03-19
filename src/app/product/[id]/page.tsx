@@ -1,12 +1,6 @@
-import { getProduct } from "@/app/actions/main-actions";
-import ActionButtons from "@/components/Product-Page/ActionButtons";
-import Breadcrumb from "@/components/Product-Page/Breadcrumb";
-import Stars from "@/components/Product-Page/Stars";
-import Image from "next/image";
-import productImage from "../../../../public/prod_img.png";
-import { Suspense } from "react";
 import ProductDetails from "@/components/Product-Page/ProductContent";
 import ProductPageSkeleton from "@/components/Skeletons/ProductPageSkeleton";
+import { Suspense } from "react";
 
 export default async function ProductPage({
 	params,
