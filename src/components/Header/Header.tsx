@@ -12,7 +12,7 @@ async function Header() {
 				href={"/"}
 				className="lg:text-2xl font-medium font-sans tracking-tight text-black text-xl"
 			>
-				Ebra
+				ebra.
 			</Link>
 
 			<div className="flex items-center gap-6">
