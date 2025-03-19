@@ -1,9 +1,9 @@
 'use client'
 import { useCartStore } from '@/lib/store/cartStore';
-import { ShoppingBag, ShoppingBasketIcon } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
+import Link from "next/link";
 import CartPopoverItem from "../Cart/CartPopover/CartPopoverItem";
 import { Popover, PopoverContent, PopoverTrigger } from "../Shared/Popover";
-import Link from "next/link";
 
 function CartIcon() {
 	const { cart, totalItems } = useCartStore();

@@ -14,7 +14,7 @@ export default function QuantitySelector({
 	const updateQuantity = useCartStore((state) => state.updateQuantity);
 
 	return (
-		<div className="flex items-center gap-0 px-2 border border-neutral-200  py-1">
+		<div className="flex items-center gap-0 px-2 border border-neutral-200 w-fit  py-1">
 			<button
 				onClick={() => updateQuantity(id, quantity - 1)}
 				className="w-full flex items-center justify-center  text-black text-xl
