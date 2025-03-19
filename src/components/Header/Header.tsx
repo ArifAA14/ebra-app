@@ -1,11 +1,13 @@
-import { Search } from 'lucide-react';
-import Link from 'next/link'
-import React from 'react'
+import Link from 'next/link';
 import CartIcon from "./CartIcon";
+import Search from './Search';
+import { getAllProducts } from '@/app/actions/main-actions';
 
-function Header() {
+async function Header() {
+	const products = await getAllProducts();
 	return (
-		<div className="w-full h-full flex items-center justify-between ">
+		<div className="w-full h-full flex items-center justify-between lg:max-w-[80%] md:max-w-[90%] mx-auto
+		lg:px-8 px-6 pt-8 ">
 			<Link
 				href={"/"}
 				className="lg:text-2xl font-medium font-sans tracking-tight text-black text-xl"
@@ -14,12 +16,7 @@ function Header() {
 			</Link>
 
 			<div className="flex items-center gap-6">
-				<Link
-					href={"/search"}
-					className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
-				>
-					<Search />
-				</Link>
+				<Search products={products} />
 				<CartIcon />
 			</div>
 		</div>

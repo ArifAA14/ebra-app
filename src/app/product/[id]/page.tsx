@@ -14,7 +14,9 @@ export default async function ProductPage({
 	if (!id) return <div>No product found</div>;
 	const product = await getProduct(id);
 	return (
-		<div className="w-full h-full flex flex-col gap-6 mt-10">
+		<div className="w-full h-full flex flex-col gap-6 mt-4
+		lg:max-w-[80%] md:max-w-[90%] mx-auto  lg:p-8 p-6"
+		>
 			<Breadcrumb product={product} />
 			<div
 				className="w-full h-full grid lg:grid-cols-[40%_60%] border p-6

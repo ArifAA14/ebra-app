@@ -5,7 +5,9 @@ import { useCartStore } from "@/lib/store/cartStore";
 function CartPage() {
 	const { cart, totalItems, totalPrice } = useCartStore();
 	return (
-		<div className="w-full h-full flex flex-col gap-6 mt-10">
+		<div className="w-full h-full flex flex-col gap-6 mt-4
+		lg:max-w-[80%] md:max-w-[90%] mx-auto  lg:p-8 p-6
+		">
 			<div className="flex flex-col gap-1.5">
 				<h2 className="text-2xl font-medium font-sans tracking-tight  text-black">
 					Order Summary
