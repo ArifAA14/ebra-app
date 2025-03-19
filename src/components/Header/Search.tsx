@@ -63,7 +63,9 @@ function Search({ products }: { products: Product[] }) {
                             ))
                         ) : (
                             searchTerm && (
-                                <p className="text-sm text-gray-500">No results found.</p>
+                                <div className="w-full h-full flex items-center justify-center">
+                                <p className="text-sm text-gray-300">No results found.</p>
+                                </div>
                             )
                         )}
                     </div>
